@@ -1,0 +1,35 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <!--VUE CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+</head>
+<body>
+    <div id="vue-app">
+        <!-- ใน app.js จะเป็น foodApp-->
+       <food-app>
+           <h2>อาหารอีสาน</h2>
+           <ul>
+               <li>ก้อย</li>
+               <li>ส้มตำ</li>
+           </ul>
+       </food-app>
+    </div>    
+
+    <template id="foodarea">
+        <div id="food">
+            <h4>เมนูอาหาร</h4>
+            <!-- slot แสดง child จาก custom component -->
+            <slot></slot>
+            <h5>เมนูขายดี</h5>
+        </div>
+    </template> 
+
+    <script src="app.js"></script>
+</body>
+</html>

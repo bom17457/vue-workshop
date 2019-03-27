@@ -1,0 +1,28 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <!--VUE CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+</head>
+<body>
+    <p>Multiple View คือการเอา component หลายๆส่วนมาทำงานในหน้าเดียวกัน</p>
+    <hr>
+    <div id="post">
+        <p><h4>หัวข้อ : {{title}}</h4></p>
+        <p><h4>ข้อความ : {{message}}</h4></p>
+    </div>
+    <div id="likeSystem">
+        <button id="like" @click="changeLike">ถูกใจ</button>
+        {{like}}
+    </div>
+    <div id="comment">
+        <textarea name="name" rows="8" cols="80">{{text}}</textarea>
+    </div>    
+    <script src="multipleView.js"></script>
+</body>
+</html>

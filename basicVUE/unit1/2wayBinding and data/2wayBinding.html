@@ -1,0 +1,81 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+
+    <!--VUE CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+    <!--Bootstrap Style-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="vue-app">
+        <!-- 2 way data binding-->
+        <!-- หากมีการใช้งาน function กับ data ที่ทำ 2way data binding textbox จะไม่สามารถเปลี่ยนค่าได้-->
+        <h4>2 Way data binding</h4>
+        <p>name : <input type="text" v-model="name" /></p>
+        <p>
+            Fav Food:
+            <input type="checkbox" value="ส้มตำ" v-model="foods" />
+            <label>ส้มตำ</label>
+
+            <input type="checkbox" value="มาม่า" v-model="foods" />
+            <label>มาม่า</label>
+
+            <input type="checkbox" value="พิซซ่า" v-model="foods" />
+            <label>พิซซ่า</label>
+
+            <input type="checkbox" value="ชาบู" v-model="foods" />
+            <label>ชาบู</label>
+        </p>
+        <p>
+            <label>Gender : </label>
+            <input type="radio" value="Male" v-model="gender" />
+            <label>Male</label>
+
+            <input type="radio" value="Female" v-model="gender" />
+            <label>Female</label>
+        </p>
+
+        <p>
+            <label>Jobs : </label>
+            <select v-model="job">
+                <option disabled value="">Select Your Jobs...</option>
+                <option>Student</option>
+                <option>Programmer</option>
+                <option>Gammer</option>
+            </select>
+        </p>
+
+        <hr />
+        <h5>name : {{name}}</h5>
+        <h5>foods : {{foods}}</h5>
+        <h5>gender : {{gender}}</h5>
+        <h5>jobs : {{job}}</h5>
+    </div>
+
+
+
+    <!--import vue object-->
+    <script src="app.js" charset="utf-8"></script>
+    <!--Bootstrap Script-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

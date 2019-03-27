@@ -1,0 +1,29 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <!--VUE CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+</head>
+<body>
+    <div id="vue-app">
+        <span>ชื่อพนักงาน</span>
+        <input v-model="newData.name" />
+        <span>เงินเดือน</span>
+        <input v-model="newData.salary" />
+        <br/><br/>
+        <button @click="addEmp">บันทึกข้อมูล</button>
+        <ul>
+            <li v-for="emp in empGroup">
+                {{emp.empName}} ได้เงินเดือน {{emp.salary}}
+            </li>
+        </ul>
+
+    </div>
+    <script src="compute-method.js"></script>
+</body>
+</html>
